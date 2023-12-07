@@ -39,9 +39,12 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "accounts.apps.AccountsConfig",
     "pages.apps.PagesConfig",
+    "articles.apps.ArticlesConfig",
     "crispy_forms",
     "crispy_bootstrap5",
 ]
+
+TIME_ZONE = "America/New_York"
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -134,3 +137,6 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+RESEND_SMTP_PORT = 587
+RESEND_SMTP_USERNAME = "resend"
+RESEND_SMTP_HOST = "smtp.resend.com"
